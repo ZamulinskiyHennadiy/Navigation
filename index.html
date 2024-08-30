@@ -16,19 +16,19 @@
   <main>
     <header>
       <nav>
-        <ul id="left">
+        <ul class="start">
           <li><a href="#mail"><img src="pictures/mail.svg" alt="mail" id="litel"></a></li>
           <li><a href="#chats"><img src="pictures/sms.svg" alt="Chats"></a></li>
           <li><a href="#calendar"><img src="pictures/calendar.svg" alt="calendar"></a></li>
           <li><a href="#star"><img src="pictures/star.svg" alt="star"></a></li>
         </ul>
-        <ul id="right">
-          <img src="pictures/lang-icon.svg">
+        <ul class="end">
+          <li><a href="#usa"><img src="pictures/lang-icon.svg"></a></li>
           <h3>English</h3>
-          <img src="pictures/change-theme.svg">
-          <img src="pictures/search.svg">
-          <img src="pictures/Vector2.svg">
-          <img src="pictures/photo.svg">
+          <li><a href="#lepms"><img src="pictures/change-theme.svg"></a></li>
+          <li><a href="#search"><img src="pictures/search.svg"></a></li>
+          <li><a href="#poolt"><img src="pictures/Vector2.svg"></a></li>
+          <li><a href="#ava"><img src="pictures/photo.svg"></a></li>
         </ul>
       </nav>
     </header>
@@ -36,8 +36,8 @@
     <img src="pictures/bg-dark.png" alt="bg-dark" class="placeholder">
   </main>
 
-  <aside>
-    <ul id="kkk">
+  <aside class="sidebar expanded">
+    <ul class="menu">
       <li><a href="#bol"><img src="pictures/bol.svg" alt="bol"></a></li>
       <li><a href="#comp"><img src="pictures/comp.svg" alt="comp"></a>
         <p>Dashboard</p>
@@ -67,7 +67,14 @@
         <p>Leaflet Maps</p>
       </li>
     </ul>
+    <button class="toggle-btn"><img src="pictures/Vector3.svg" alt="toggle"></button>
   </aside>
+
+  <script>
+    document.querySelector('.toggle-btn').addEventListener('click', function() {
+        document.querySelector('.sidebar').classList.toggle('expanded');
+    });
+  </script>
 </body>
 
 </html>
